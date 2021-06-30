@@ -1,0 +1,48 @@
+@import '../../../../../../../styles/mixins.less';
+@import '../../../../../../../styles/variables.less';
+
+.message-item {
+    height: @fit;
+    width: @fit;
+    max-width: 300px;
+    margin: 0 0 20px 0;
+    padding: 10px 20px;
+    background-color: rgb(94 94 94 / 10%);
+    .flex(flex, initial, center, initial);
+    margin-left: 15px;
+    border-radius: 30% 30% 30% 0%;
+    border: 1px solid @white;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &__body {
+        width: 100%;
+        .flex(flex, center, initial, column);
+        margin-left: 10px;
+    }
+
+    &__title {
+        margin: 0 0 5px 0;
+        .word(pre-wrap, break-all);
+        color: @black;
+    }
+
+    &__text {
+        position: relative;
+        height: @fit;
+        .word(pre-wrap, break-all);
+        max-width: 200px;
+        padding: 0;
+        margin: 0;
+        color: @blue;
+
+        &:last-child {
+            color: @white;
+        }
+    }
+}
+
+

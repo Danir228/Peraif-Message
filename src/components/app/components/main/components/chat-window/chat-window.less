@@ -1,0 +1,31 @@
+@import "../../../../../styles/mixins.less";
+
+@border: 1px solid #a3a2a2;
+
+.chatwindow {
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+
+    &__messages {
+        height: 60vh;
+        padding: 20px 0 20px 0;
+        .flex(flex, initial, flex-start, column);
+        border-right: @border;
+        border-left: @border;
+        overflow-y: auto;
+    }
+
+    &__scroll {
+        position: fixed;
+        top: 85px;
+        right: 50px;
+        font-size: 30px;
+        z-index: 1;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
