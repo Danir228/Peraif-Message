@@ -2,6 +2,10 @@ import React from 'react';
 
 import './header.less';
 
+/**
+ * Рендерит шапку сайта с логотипом
+ */
+
 const Header = () => {
     return (
         <header className="header">

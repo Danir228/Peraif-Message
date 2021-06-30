@@ -3,6 +3,10 @@ import ChatWindow from './components/chat-window/chat-window';
 
 import './main.less';
 
+/**
+ * Рендерит компонент ChatWindow - основная часть страницы, с собщениями, полями ввода и кнопкой отправки
+ */
+
 const Main = () => {
     return (
         <main className="main">

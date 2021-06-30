@@ -4,9 +4,18 @@ import { Context } from "../../../../../../../..";
 
 import "./enter-message.less";
 
-const EnterMessage = () => {
-    const { value, setValue, name, setName, sendMessage } = useContext(Context);
+/**
+ * Рендерит input для ввода сообщения, input для ввода имени пользователя и кнопку для отправки сообщения
+ */
 
+const EnterMessage = () => {
+    /**
+     * Получаем переменные(value, name) и функции(setValue, setName, sendMessage) через контекст используя хук useContext
+     * Перменная состояния value для сообщения пользователя, функция для обновления переменной value - setValue
+     * Перменная состояния name для имения пользователя, функция для обновления переменной name - setName
+     * Функция для отправки сообщения - sendMessage
+     */
+    const { value, setValue, name, setName, sendMessage } = useContext(Context);
     return (
         <div className="enter-message">
             <input

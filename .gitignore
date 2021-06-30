@@ -10,6 +10,9 @@
 *.sw*
 .vs/
 .env
+.firebaserc
+firebase.json
+.firebase
 
 # misc
 

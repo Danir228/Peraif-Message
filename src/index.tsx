@@ -7,6 +7,11 @@ import 'firebase/firestore'
 import "../src/components/styles/general.less";
 import "../src/components/styles/reset.less";
 
+/**
+ * firebase - Облачная база данных, initializeApp - Создает и инициализирует экземпляр приложения
+ * @param {object} - обьект с ключами и идентификаторами
+ */
+
 
 firebase.initializeApp(
     {
@@ -19,9 +24,21 @@ firebase.initializeApp(
     }
 );
 
+/**
+ * Переменная firestore, получает доступ к базе данных firestore
+ */
+
 const firestore = firebase.firestore();
 
+/**
+ * Экспорт переменной Context, которой присваивается обьект Context
+ */
+
 export const Context = createContext<any>(null);
+
+/**
+ * Оборачивает компонент App(Основной компонент) в Context.Provider и рендерит внутри элемента по айди #root
+ */
 
 render(
     <Context.Provider value={{
